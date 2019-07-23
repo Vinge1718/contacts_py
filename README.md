@@ -1,2 +1,2 @@
 # contacts_py
-simple python practice on 
+simple intro to python practice on variable manipulation
