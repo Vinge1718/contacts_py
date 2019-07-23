@@ -37,3 +37,12 @@ def count_lines(text_file):
             counter+=1
 
         return counter
+
+def long_string(text_file):
+    """
+    Function trhat returns the longest string in a document
+    """
+    with open(text_file, "r") as handle:
+        data = handle.read().split()
+        string = max(data, key=len)
+        return len(string)

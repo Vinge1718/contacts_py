@@ -47,6 +47,15 @@ class TestReadFiles(unittest.TestCase):
                 connt +=1
         self.assertEqual(connt, readfiles.count_lines("test.txt"))
 
+    def test_longest_word(self):
+        """
+        Test to check for the longest word in the document
+        """
+        with open("test.txt", "r") as handle:
+            data = handle.read().split()
+            longest_string = max(data, key=len)
+            self.assertEqual(len(longest_string), readfiles.long_string("test.txt"))
+
 if __name__ == "__main__":
     unittest.main()
 
