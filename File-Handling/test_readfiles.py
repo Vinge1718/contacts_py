@@ -36,6 +36,16 @@ class TestReadFiles(unittest.TestCase):
                     count+=1
         self.assertEqual(count, readfiles.count_words("Ipsum"))
 
+    def test_line_count(self):
+        """
+        Test to count how many lines we have in a text document
+        """
+        with open("test.txt", "r") as handle:
+            data = handle.readlines()
+            connt = 0
+            for line in data:
+                connt +=1
+        self.assertEqual(connt, readfiles.count_lines("test.txt"))
 
 if __name__ == "__main__":
     unittest.main()
